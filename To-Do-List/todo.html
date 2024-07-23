@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="title">
+        <h1 class="t1">To Do List</h1>
+        <div class="main">
+            <input type="text" class="inputText" placeholder="記得買牛奶...">
+            <button id="btnDone">DONE !</button>
+        </div>
+    
+        <ul id="ulList">
+        </ul>
+    </div>
+    <script>
+        document.getElementById("btnDone").addEventListener("click",createTodo)
+
+        function createTodo(){
+            let inpValue = document.querySelector(".inputText").value;
+
+            let newlist = document.createElement("li");
+            
+            let liText = document.createElement("span");
+            liText.innerText = inpValue;
+            newlist.appendChild(liText);
+            
+            let btnEdit = document.createElement("button");
+            btnEdit.innerText = "編輯";
+            btnEdit.addEventListener("click", function(){editList(liText)})
+            newlist.appendChild(btnEdit);
+            
+            let btnDel = document.createElement("button");
+            btnDel.innerText = "刪除";
+            btnDel.addEventListener("click", function(){delList(newlist)})
+            newlist.appendChild(btnDel);     
+            
+            document.querySelector("#ulList").appendChild(newlist);
+            document.querySelector(".inputText").value = "";
+        }
+
+        function editList(liText){
+            let newText = prompt("編輯項目" , liText.innerText);
+            if (newText !== null) {
+                liText.innerText = newText;
+            }
+        }
+
+        function delList(List){
+            List.remove();
+        }
+    </script>
+</body>
+</html>

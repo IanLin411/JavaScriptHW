@@ -1,0 +1,64 @@
+*{
+    list-style: none;
+    margin: 0 0 ;
+    
+}
+
+body{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: burlywood;
+    line-height: 1.6;
+    background-image: url('cyberpunk-7871605_1280.webp');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.title{
+    width: 500px;
+    margin: 50px auto;
+}
+
+.title .t1{
+    text-align: center;
+    color: rgb(255, 0, 149);
+    font-style: italic;
+    border-bottom: 5px solid white;
+    margin-bottom: 10px;
+}
+
+.main{
+    /* padding-left: 130px; */
+    padding: 0 110px;
+}
+
+.main .inputText{
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+li{
+    padding: 0 120px;
+}
+
+span{
+    font-size: 15px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: blue;
+    color: yellow;
+}
+
+button{
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #fff;
+    border-style: none;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
